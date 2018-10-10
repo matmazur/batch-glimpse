@@ -1,9 +1,0 @@
-<job id="csvToDb" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
-    <step id="job">
-<chunk>
-    <reader ref="csvReader"/>
-    <processor ref="csvProcessor"/>
-    <writer ref="csvWriter"/>
-</chunk>
-    </step>
-</job>

@@ -10,19 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Properties;
 
-@WebServlet("csv")
-public class CsvController extends HttpServlet {
-
+@WebServlet("/job")
+public class JobController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        JobOperator job = BatchRuntime.getJobOperator();
 
-        long jobId = job.start("csvToDb",new Properties());
+        JobOperator jobOperator = BatchRuntime.getJobOperator();
 
-        System.out.println("job id " + jobId);
-        resp.getWriter().println("job id " +jobId);
-
-
+        long jobId = jobOperator.start("theJob", new Properties());
+        resp.getWriter().println("The job started with id " + jobId);
     }
 }

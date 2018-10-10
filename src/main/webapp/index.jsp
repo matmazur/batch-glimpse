@@ -4,8 +4,7 @@
     <title>$Title$</title>
 </head>
 <body>
-<a href="/copy">copy here</a>
-<a href="/csv">csv here</a>
+<a href="/job">copy here</a>
 
 </body>
 </html>

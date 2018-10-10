@@ -1,0 +1,26 @@
+<job id="theJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
+
+
+    <step id="copy">
+        <batchlet ref="copyFilesBatchlet"/>
+        <next on="MOVE_SUCCESS" to="jobDecider"/>
+        <fail on="MOVE_FAILED" exit-status="MOVE_FAILED"/>
+    </step>
+
+
+    <decision id="jobDecider" ref="jobDecider">
+        <next on="IMPORT_DATA" to="importData" />
+        <end on="NO_FILES" exit-status="NO_FILES" />
+    </decision>
+
+
+    <step id="importData">
+        <chunk>
+            <reader ref="csvReader"/>
+            <processor ref="csvProcessor"/>
+            <writer ref="csvWriter"/>
+        </chunk>
+    </step>
+
+
+</job>
