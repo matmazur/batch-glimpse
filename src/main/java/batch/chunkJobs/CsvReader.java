@@ -1,4 +1,4 @@
-package batch.batchlet.chunkJobs;
+package batch.chunkJobs;
 
 import javax.batch.api.chunk.AbstractItemReader;
 import javax.inject.Named;

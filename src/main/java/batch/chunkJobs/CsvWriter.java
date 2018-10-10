@@ -1,4 +1,4 @@
-package batch.batchlet.chunkJobs;
+package batch.chunkJobs;
 
 import javax.batch.api.chunk.AbstractItemWriter;
 import javax.ejb.Stateless;
@@ -17,6 +17,7 @@ public class CsvWriter extends AbstractItemWriter {
     @Override
     public void writeItems(List<Object> list) throws Exception {
 
+        System.out.println("persis");
         list.stream().peek(p-> System.out.println(p)).forEach(p->entityManager.persist(p));
     }
 }

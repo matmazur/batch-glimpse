@@ -1,4 +1,4 @@
-package batch.batchlet;
+package batch.chunkJobs;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -41,7 +41,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "batch.batchlet.User{" +
+        return "batch.chunkJobs.User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", lastname='" + lastname + '\'' +

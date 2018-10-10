@@ -1,6 +1,4 @@
-package batch.batchlet.chunkJobs;
-
-import batch.batchlet.User;
+package batch.chunkJobs;
 
 import javax.batch.api.chunk.ItemProcessor;
 import javax.inject.Named;
