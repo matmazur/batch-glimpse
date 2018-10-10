@@ -1,6 +1,8 @@
 package batch.batchlet;
 
 import javax.batch.api.AbstractBatchlet;
+import javax.ejb.Schedule;
+import javax.ejb.Singleton;
 import javax.inject.Named;
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -8,18 +10,18 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 @Named
+@Singleton
 public class CopyFilesBatchlet extends AbstractBatchlet {
 
     private static final String ORIGINAL = "D:/original";
     private static final String TARGET = "D:/target";
 
     public CopyFilesBatchlet() {
-        System.out.println(CopyFilesBatchlet.class.getName() + "created");
+        System.out.println(CopyFilesBatchlet.class.getName() + " created");
     }
 
-    //    @Schedule(hour = "*",minute = "*",second = "*/10")
+//        @Schedule(hour = "*",minute = "*",second = "*/20")
     public String process() throws Exception {
-
 
         if (Files.notExists(Paths.get(ORIGINAL))) {
             Files.createDirectory(Paths.get(ORIGINAL));
