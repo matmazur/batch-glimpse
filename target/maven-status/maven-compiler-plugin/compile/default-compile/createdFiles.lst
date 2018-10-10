@@ -1,0 +1,8 @@
+Main.class
+batch\batchlet\CopyFilesBatchlet.class
+batch\servlet\CopyJobController.class
+batch\batchlet\User.class
+batch\servlet\CsvController.class
+batch\batchlet\chunkJobs\CsvWriter.class
+batch\batchlet\chunkJobs\CsvProcessor.class
+batch\batchlet\chunkJobs\CsvReader.class

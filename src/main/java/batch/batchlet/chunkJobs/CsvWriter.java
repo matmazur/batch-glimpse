@@ -1,13 +1,14 @@
 package batch.batchlet.chunkJobs;
 
 import javax.batch.api.chunk.AbstractItemWriter;
+import javax.ejb.Stateless;
 import javax.inject.Named;
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Named
+@Stateless
 public class CsvWriter extends AbstractItemWriter {
 
     @PersistenceContext
