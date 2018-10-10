@@ -28,7 +28,7 @@ public class CopyFilesBatchlet extends AbstractBatchlet {
                     .list(Paths.get(ORIGINAL))
                     .forEach(path -> {
                         try {
-                            Files.move(path, Paths.get(TARGET, path.getFileName().toFile().getName()));
+                            Files.copy(path, Paths.get(TARGET, path.getFileName().toFile().getName()));
                         } catch (IOException e) {
                             throw new UncheckedIOException(e);
                         }
