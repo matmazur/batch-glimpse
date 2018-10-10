@@ -13,7 +13,7 @@ public class JobDecider implements Decider {
     @Override
     public String decide(StepExecution[] stepExecutions) throws Exception {
 
-        if (Files.exists(Paths.get(CopyFilesBatchlet.TARGET))) {
+        if (Files.exists(Paths.get(CopyFilesBatchlet.TARGET+"/person_data.csv"))) {
             System.out.println("Import data");
             return "IMPORT_DATA";
         } else {
