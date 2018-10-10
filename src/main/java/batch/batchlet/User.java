@@ -1,3 +1,5 @@
+package batch.batchlet;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -39,7 +41,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "batch.batchlet.User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", lastname='" + lastname + '\'' +
