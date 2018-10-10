@@ -1,5 +1,0 @@
-<job id="copyJob" xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="1.0">
-    <step id="copy">
-        <batchlet ref="copyFilesBatchlet"/>
-    </step>
-</job>

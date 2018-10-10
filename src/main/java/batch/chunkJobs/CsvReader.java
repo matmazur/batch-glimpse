@@ -3,32 +3,23 @@ package batch.chunkJobs;
 import javax.batch.api.chunk.AbstractItemReader;
 import javax.inject.Named;
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.FileReader;
 import java.io.Serializable;
-import java.nio.charset.StandardCharsets;
 
 @Named
 public class CsvReader extends AbstractItemReader {
 
-    private static String FILE_NAME = "person_data.csv";
+    private static String FILE_NAME = "D:/target/person_data.csv";
     private BufferedReader fileReader;
 
     @Override
     public void open(Serializable serializable) throws Exception {
-        fileReader = new BufferedReader(
-                new InputStreamReader(
-                        this.getClass()
-                                .getClassLoader()
-                                .getResourceAsStream(FILE_NAME), StandardCharsets.UTF_8));
+        fileReader = new BufferedReader(new FileReader(FILE_NAME));
+
         fileReader.readLine();
     }
 
-    @Override
-    public void close() throws Exception {
-        if (fileReader != null)
-            fileReader.close();
 
-    }
 
     @Override
     public Object readItem() throws Exception {
@@ -39,6 +30,13 @@ public class CsvReader extends AbstractItemReader {
             return item;
         }
         return null;
+
+    }
+
+    @Override
+    public void close() throws Exception {
+        if (fileReader != null)
+            fileReader.close();
 
     }
 }

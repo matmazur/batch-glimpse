@@ -1,7 +1,6 @@
 package batch.batchlet;
 
 import javax.batch.api.AbstractBatchlet;
-import javax.ejb.Schedule;
 import javax.ejb.Singleton;
 import javax.inject.Named;
 import java.io.IOException;
@@ -13,8 +12,8 @@ import java.nio.file.Paths;
 @Singleton
 public class CopyFilesBatchlet extends AbstractBatchlet {
 
-    private static final String ORIGINAL = "D:/original";
-    private static final String TARGET = "D:/target";
+    public static final String ORIGINAL = "D:/original";
+    public static final String TARGET = "D:/target";
 
     public CopyFilesBatchlet() {
         System.out.println(CopyFilesBatchlet.class.getName() + " created");
