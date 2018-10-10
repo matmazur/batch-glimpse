@@ -4,7 +4,8 @@
     <title>$Title$</title>
 </head>
 <body>
-<h1>copy files</h1>
 <a href="/copy">copy here</a>
+<a href="/csv">csv here</a>
+
 </body>
 </html>
