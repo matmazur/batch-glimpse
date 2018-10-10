@@ -8,4 +8,10 @@ public class CsvProcessor implements ItemProcessor {
     public Object processItem(Object o) throws Exception {
         return null;
     }
-}
+
+
+    private UserData createUserData (String data){
+
+
+
+    }}

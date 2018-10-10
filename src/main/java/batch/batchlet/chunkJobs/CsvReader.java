@@ -18,8 +18,7 @@ public class CsvReader extends AbstractItemReader {
                         this.getClass()
                                 .getClassLoader()
                                 .getResourceAsStream(FILE_NAME), StandardCharsets.UTF_8));
-
-
+        fileReader.readLine();
     }
 
     @Override
