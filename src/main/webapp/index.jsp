@@ -1,16 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: matma
-  Date: 09.10.2018
-  Time: 21:53
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
+<head>
     <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+</head>
+<body>
+<h1>copy files</h1>
+<a href="/copy">copy here</a>
+</body>
 </html>

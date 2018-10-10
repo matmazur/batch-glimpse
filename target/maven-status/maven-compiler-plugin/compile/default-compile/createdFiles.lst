@@ -1,0 +1,3 @@
+Main.class
+batch\batchlet\CopyFilesBatchlet.class
+batch\servlet\CopyJobController.class

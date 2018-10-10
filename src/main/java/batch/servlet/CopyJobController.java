@@ -18,7 +18,7 @@ public class CopyJobController extends HttpServlet {
 
         JobOperator jobOperator = BatchRuntime.getJobOperator();
 
-        long jobId = jobOperator.start("copy", new Properties());
+        long jobId = jobOperator.start("copyJob", new Properties());
         resp.getWriter().println("Copy job started with id " + jobId);
     }
 }

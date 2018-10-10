@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="batch-glimpse:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="batch-glimpse.war">
+      <element id="artifact" artifact-name="batch-glimpse:war exploded" />
+    </root>
+  </artifact>
+</component>
